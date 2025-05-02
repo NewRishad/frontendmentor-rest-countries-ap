@@ -5,7 +5,7 @@ export const getAllCountries = async (req, res) => {
         const response = await axios.get('https://restcountries.com/v3.1/all');
         res.status(200).json(response.data);
     } catch (error) {
-        console.error('Error fetching countries:', error.message);
+        console.error('Error fetching countries:', error);
         res.status(500).json({message: 'Failed to fetch countries'});
     }
 };
